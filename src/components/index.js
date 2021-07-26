@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Navbar from './navbar/Navbar'
+import About from './about/About'
 
 import './App.css';
 
@@ -10,7 +11,7 @@ function App() {
     <Router>
         <Navbar /> 
         <Route path="/">
-            {/* About */}
+            <About/>
         </Route>
         <Route path="/portfolio">
             {/* Projects*/}
@@ -21,8 +22,6 @@ function App() {
         <Route path="/">
             {/* Resume */}
         </Route>
-
-
     </Router>
     );
 }
