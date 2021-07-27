@@ -1,8 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Navbar from './navbar/Navbar'
 import About from './about/About'
+import Projects from './projects/Projects';
 
 import './App.css';
 
@@ -10,18 +11,14 @@ function App() {
     return (
     <Router>
         <Navbar /> 
-        <Route path="/">
-            <About/>
-        </Route>
-        <Route path="/portfolio">
-            {/* Projects*/}
-        </Route>
-        <Route path="/">
-            {/* Contact */}
-        </Route>
-        <Route path="/">
-            {/* Resume */}
-        </Route>
+        <Switch>
+            <Route exact path="/">
+                <About/>
+            </Route>
+            <Route path="/projects">
+                <Projects/>
+            </Route>
+        </Switch>
     </Router>
     );
 }
