@@ -8,25 +8,29 @@ import ContactForm from './contact/Contact';
 import Resume from './resume/Resume';
 
 import './App.css';
+import Footer from './footer/Footer';
 
 function App() {
     return (
     <Router>
         <Header /> 
-        <Switch>
-            <Route exact path="/">
-                <About/>
-            </Route>
-            <Route path="/projects">
-                <Projects/>
-            </Route>
-            <Route path="/contact">
-                <ContactForm/>
-            </Route>
-            <Route path="/resume">
-                <Resume/>
-            </Route>
-        </Switch>
+            <div className="custom-container">
+            <Switch>
+                <Route exact path="/">
+                    <About/>
+                </Route>
+                <Route path="/projects">
+                    <Projects/>
+                </Route>
+                <Route path="/contact">
+                    <ContactForm/>
+                </Route>
+                <Route path="/resume">
+                    <Resume/>
+                </Route>
+            </Switch>
+            </div>  
+        <Footer/>
     </Router>
     );
 }

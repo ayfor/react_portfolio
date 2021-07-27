@@ -1,0 +1,29 @@
+ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul a{
+    text-decoration: none;
+    color: white;
+}
+
+ul li{
+    display: inline;
+    padding: 0px 20px;
+}
+
+ul li div{
+    display: inline;
+}
+
+
+/* Content layout for footer */
+#contact-info{
+    display: flex;
+    justify-content: space-evenly;
+    height: fit-content;
+    background-color: #1A1A1A;
+}
