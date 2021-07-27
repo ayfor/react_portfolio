@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 import Header from './header/Header'
 import About from './about/About'
@@ -12,26 +12,18 @@ import Footer from './footer/Footer';
 
 function App() {
     return (
-    <Router>
+    <HashRouter>
         <Header /> 
             <div className="custom-container">
             <Switch>
-                <Route exact path="/">
-                    <About/>
-                </Route>
-                <Route path="/projects">
-                    <Projects/>
-                </Route>
-                <Route path="/contact">
-                    <ContactForm/>
-                </Route>
-                <Route path="/resume">
-                    <Resume/>
-                </Route>
+                <Route exact path="/" component={About}/>
+                <Route path="/projects" component={Projects}/>
+                <Route path="/contact" component={ContactForm}/>
+                <Route path="/resume" component={Resume}/>
             </Switch>
             </div>  
         <Footer/>
-    </Router>
+    </HashRouter>
     );
 }
 
