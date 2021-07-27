@@ -1,0 +1,7 @@
+/* Sizing and shape of personal image */
+#display-pic{
+    height: 50px;
+    width: auto;
+    border-radius: 40px;
+    margin: 15px;    
+}
